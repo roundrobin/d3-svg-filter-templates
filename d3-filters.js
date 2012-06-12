@@ -41,3 +41,15 @@
             .attr('mode','multiply')
             .attr('in','fbSourceGraphic')
             .attr('in2','result91')
+
+         var filter = filter.append('feConvolveMatrix')
+          .attr('mode','multiply')
+            .attr('in1',"cCH")
+           .attr('order',"3 3")
+           .attr('targetX',"0")
+           .attr('targetY',"0") 
+           .attr('edgeMode',"wrap")  
+           .attr('kernelMatrix',1+' '+1+' '+1+' '+1+' '+1+' '+1+' '+1+' '+1+' '+1)
+           .attr('preserveAlpha',"false")
+          .attr('result','cCH2')
+           
